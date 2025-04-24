@@ -2,14 +2,20 @@
 
 import { useState, useEffect } from 'react';
 
+// Playlist turi uchun interface
+interface Playlist {
+  name: string;
+  songs?: { id: string; title: string; artist: string }[];
+}
+
 export default function DynamicPlaylists() {
-  const [playlists, setPlaylists] = useState<any[]>([]);
+  const [playlists, setPlaylists] = useState<Playlist[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchPlaylists = async () => {
       try {
-        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MGEzNjAyYTQxNWNkMzI4ZDI5MjQ2NyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NDU0OTk2NjcsImV4cCI6MTc0NTU4NjA2N30.VXjwXnYfVqKXb5kkPFtnqk1-TCdbmQuCqthBomCSsho"; // Bu yerni o‘zingizning tokeningiz bilan almashtiring
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MGEzNjAyYTQxNWNkMzI4ZDI5MjQ2NyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NDU0OTk2NjcsImV4cCI6MTc0NTU4NjA2N30.VXjwXnYfVqKXb5kkPFtnqk1-TCdbmQuCqthBomCSsho";
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/playlist`, {
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -20,8 +26,8 @@ export default function DynamicPlaylists() {
         }
         const data = await response.json();
         setPlaylists(data.playlists || []);
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Noma’lum xato');
       }
     };
 

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaHome, FaBook, FaUser, FaInfoCircle, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
@@ -11,7 +11,6 @@ export default function Navbar() {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
-  
 
   return (
     <nav className="navbar">

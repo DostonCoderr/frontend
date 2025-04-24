@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import { FaChevronDown, FaChevronRight } from 'react-icons/fa';
 import '../styles/api-doc.css';
@@ -86,12 +85,12 @@ export default function ApiDoc() {
 
           {/* Endpoints Documentation */}
           <section className="content-section">
-            <h2>Endpoint’lar Hujjatlashtirish</h2>
+            <h2>Endpointlar Hujjatlashtirish</h2>
 
             {/* Playlist Add */}
             <div>
               <h3>POST /api/playlist/add</h3>
-              <p>Pleylistga qo‘shiq qo‘shish uchun ishlatiladi.</p>
+              <p>Pleylistga qoshiq qoshish uchun ishlatiladi.</p>
               <p><strong>Header:</strong> <code>Authorization: Bearer &lt;token&gt;</code></p>
               <p><strong>Body:</strong></p>
               <pre>
@@ -121,7 +120,7 @@ export default function ApiDoc() {
               <p><strong>Xatolar:</strong></p>
               <ul>
                 <li><code>401</code>: Foydalanuvchi autentifikatsiya qilinmagan.</li>
-                <li><code>404</code>: Qo‘shiq yoki foydalanuvchi topilmadi.</li>
+                <li><code>404</code>: Qoshiq yoki foydalanuvchi topilmadi.</li>
                 <li><code>500</code>: Server xatosi.</li>
               </ul>
             </div>
@@ -167,7 +166,7 @@ export default function ApiDoc() {
             {/* Playlist Delete */}
             <div>
               <h3>DELETE /api/playlist/delete</h3>
-              <p>Pleylistni o‘chirish uchun ishlatiladi.</p>
+              <p>Pleylistni ochirish uchun ishlatiladi.</p>
               <p><strong>Header:</strong> <code>Authorization: Bearer &lt;token&gt;</code></p>
               <p><strong>Body:</strong></p>
               <pre>
@@ -200,7 +199,7 @@ export default function ApiDoc() {
             {/* Playlist Remove Song */}
             <div>
               <h3>DELETE /api/playlist/remove-song</h3>
-              <p>Pleylistdan qo‘shiqni o‘chirish uchun ishlatiladi.</p>
+              <p>Pleylistdan qoshiqni ochirish uchun ishlatiladi.</p>
               <p><strong>Header:</strong> <code>Authorization: Bearer &lt;token&gt;</code></p>
               <p><strong>Body:</strong></p>
               <pre>
@@ -230,7 +229,7 @@ export default function ApiDoc() {
               <p><strong>Xatolar:</strong></p>
               <ul>
                 <li><code>401</code>: Foydalanuvchi autentifikatsiya qilinmagan.</li>
-                <li><code>404</code>: Pleylist yoki qo‘shiq topilmadi.</li>
+                <li><code>404</code>: Pleylist yoki qoshiq topilmadi.</li>
                 <li><code>500</code>: Server xatosi.</li>
               </ul>
             </div>
@@ -272,7 +271,7 @@ export default function ApiDoc() {
             {/* Songs Create */}
             <div>
               <h3>POST /api/songs</h3>
-              <p>Yangi qo‘shiq qo‘shish uchun ishlatiladi.</p>
+              <p>Yangi qoshiq qoshish uchun ishlatiladi.</p>
               <p><strong>Body:</strong></p>
               <pre>
                 {JSON.stringify(
@@ -300,7 +299,7 @@ export default function ApiDoc() {
               </pre>
               <p><strong>Xatolar:</strong></p>
               <ul>
-                <li><code>400</code>: Noto‘g‘ri ma'lumot.</li>
+                <li><code>400</code>: Notogri ma'lumot.</li>
                 <li><code>500</code>: Server xatosi.</li>
               </ul>
             </div>
