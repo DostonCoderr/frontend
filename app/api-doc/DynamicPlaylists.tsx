@@ -9,8 +9,8 @@ export default function DynamicPlaylists() {
   useEffect(() => {
     const fetchPlaylists = async () => {
       try {
-        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MDc4MGE0OTZiMzY5YzdkMzZkMGY4MSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NDUzMjIxNjksImV4cCI6MTc0NTQwODU2OX0.fy7ySby3t1GFrLmoYJKEJghqjenT5PsIjkIXwujJACA"; // Bu yerni o‘zingizning tokeningiz bilan almashtiring
-        const response = await fetch('http://localhost:4000/api/playlist', {
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MGEzNjAyYTQxNWNkMzI4ZDI5MjQ2NyIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3NDU0OTk2NjcsImV4cCI6MTc0NTU4NjA2N30.VXjwXnYfVqKXb5kkPFtnqk1-TCdbmQuCqthBomCSsho"; // Bu yerni o‘zingizning tokeningiz bilan almashtiring
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/playlist`, {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

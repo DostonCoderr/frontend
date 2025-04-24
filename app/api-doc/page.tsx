@@ -66,7 +66,7 @@ export default function ApiDoc() {
 
           <section className="content-section">
             <h2>API Base URL</h2>
-            <p><strong>Live Server:</strong> <code>http://localhost:4000</code></p>
+            <p><strong>Live Server:</strong> <code>https://music-api-f8wq.onrender.com</code></p>
           </section>
 
           <section className="content-section">
