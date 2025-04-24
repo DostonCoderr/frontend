@@ -1,0 +1,117 @@
+.how-can-use-page {
+    background: #1a252f;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  /* Header Styles */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(90deg, #48dbfb, #1dd1a1);
+    color: white;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-container h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .header-container a {
+    color: white;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+  }
+  
+  .header-container a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Main Section Styles */
+  .container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-5px);
+  }
+  
+  .section h2 {
+    font-size: 1.6rem;
+    color: #48dbfb;
+    margin-bottom: 1rem;
+  }
+  
+  .section h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+  }
+  
+  .section p {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .section ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: #666;
+  }
+  
+  .section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .section pre {
+    background: #2d2d2d;
+    color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 0.9rem;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: linear-gradient(90deg, #48dbfb, #1dd1a1);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+  }
+  
+  /* Moslashuvchan dizayn */
+  @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .header-container h1 {
+      font-size: 1.5rem;
+    }
+  
+    .section {
+      padding: 1rem;
+    }
+  }

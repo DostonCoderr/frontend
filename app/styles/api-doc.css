@@ -1,0 +1,199 @@
+.api-doc-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #f5f7fa;
+  }
+  
+  .api-doc-container {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar Styles */
+  .sidebar {
+    width: 250px;
+    background: #e5e7eb;
+    padding: 1rem;
+    border-right: 1px solid #d1d5db;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .sidebar-logo {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .sidebar h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a252f;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .sidebar-section h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a252f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .section-toggle {
+    transition: color 0.3s ease;
+  }
+  
+  .section-toggle:hover {
+    color: #3b82f6;
+  }
+  
+  .sidebar-section ul {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .sidebar-section ul li {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+  }
+  
+  .sidebar-section ul li:hover {
+    color: #3b82f6;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+    background: white;
+  }
+  
+  .content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .content-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a252f;
+  }
+  
+  .version {
+    background: #e5e7eb;
+    color: #4b5563;
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .content-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .action-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 5px;
+    background: white;
+    color: #4b5563;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .action-btn:hover {
+    background: #f5f7fa;
+  }
+  
+  .export-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+  }
+  
+  .export-btn:hover {
+    background: #2563eb;
+  }
+  
+  .content-section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .content-section h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a252f;
+    margin-bottom: 0.5rem;
+  }
+  
+  .content-section p {
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+  }
+  
+  .content-section code {
+    background: #1a252f;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+  }
+  
+  .content-section ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: #4b5563;
+  }
+  
+  .content-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .error {
+    color: #e63946;
+    font-weight: 500;
+  }
+  
+  /* Moslashuvchan Dizayn */
+  @media (max-width: 768px) {
+    .api-doc-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #d1d5db;
+    }
+  
+    .main-content {
+      padding: 1rem;
+    }
+  
+    .content-header h1 {
+      font-size: 1.5rem;
+    }
+  
+    .content-actions {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
