@@ -2,7 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaBook,
+  FaUser,
+  FaInfoCircle,
+} from 'react-icons/fa';
 import '../styles/Navbar.css';
 
 export default function Navbar() {
@@ -29,27 +36,27 @@ export default function Navbar() {
         <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
           <li className="nav-item">
             <Link href="/about-api" className="nav-link" onClick={toggleSidebar}>
-              About
+              <FaInfoCircle className="nav-icon" /> About
             </Link>
           </li>
           <li className="nav-item">
             <Link href="/api-doc" className="nav-link" onClick={toggleSidebar}>
-              API Doc
+              <FaBook className="nav-icon" /> API Doc
             </Link>
           </li>
           <li className="nav-item">
             <Link href="/how-can-use" className="nav-link" onClick={toggleSidebar}>
-              How Can Use
+              <FaHome className="nav-icon" /> How Can Use
             </Link>
           </li>
           <li className="nav-item">
             <Link href="/about-doston" className="nav-link" onClick={toggleSidebar}>
-              About Doston
+              <FaUser className="nav-icon" /> About Doston
             </Link>
           </li>
           <li className="nav-item register-btn">
             <Link href="/login" className="nav-link btn-register" onClick={toggleSidebar}>
-              Register
+              <FaUser className="nav-icon" /> Register
             </Link>
           </li>
         </ul>

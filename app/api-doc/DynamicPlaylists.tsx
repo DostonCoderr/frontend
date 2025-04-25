@@ -26,8 +26,12 @@ export default function DynamicPlaylists() {
         }
         const data = await response.json();
         setPlaylists(data.playlists || []);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Noma’lum xato');
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('Nomalum xato');
+        }
       }
     };
 
@@ -42,7 +46,7 @@ export default function DynamicPlaylists() {
         <ul>
           {playlists.map((playlist, index) => (
             <li key={index}>
-              <strong>{playlist.name}</strong>: {playlist.songs?.length || 0} ta qo‘shiq
+              <strong>{playlist.name}</strong>: {playlist.songs?.length || 0} ta qoshiq
             </li>
           ))}
         </ul>

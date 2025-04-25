@@ -299,7 +299,7 @@ export default function ApiDoc() {
               </pre>
               <p><strong>Xatolar:</strong></p>
               <ul>
-                <li><code>400</code>: Notogri ma'lumot.</li>
+                <li><code>400</code>: Notogri malumot.</li>
                 <li><code>500</code>: Server xatosi.</li>
               </ul>
             </div>
